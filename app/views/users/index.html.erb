@@ -1,0 +1,22 @@
+<h1>User list</h1>
+<%= render 'filter_form' %>
+<br>
+<% if @users.present? %>
+  <table class="table table-bordered">
+    <thead>
+      <th>Name</th>
+      <th>Date of birth</th>
+      <th>Action</th>
+    </thead>
+
+    <tbody id='users'>
+      <%= render @users %>
+    </tbody>
+  </table>
+
+<% else %>
+  <h3>No user found</h3>
+<% end %>
+<%= link_to("Add new", new_user_path) %>
+
+<%= javascript_include_tag "daterangepicker_initializer.js" %>

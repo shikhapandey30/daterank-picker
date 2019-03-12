@@ -1,0 +1,12 @@
+<%= render 'error', object: @user %>
+
+<%= form_for(@user) do |form| %>
+
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+
+  <%= form.label :dob %>
+  <%= form.date_field :dob %>
+
+  <%= form.submit "Save" %>
+<% end %>
